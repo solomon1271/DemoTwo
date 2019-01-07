@@ -13,10 +13,10 @@ namespace EmployeeDataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EmployeeDBEntities : DbContext
+    public partial class EmployeeDB : DbContext
     {
-        public EmployeeDBEntities()
-            : base("name=EmployeeDBEntities")
+        public EmployeeDB()
+            : base("name=EmployeeDB")
         {
         }
     

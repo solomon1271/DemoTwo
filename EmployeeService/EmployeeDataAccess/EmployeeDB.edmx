@@ -50,7 +50,7 @@
           <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="EmployeeDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EmployeeDB" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="Users" EntityType="Self.User" />
         </EntityContainer>
@@ -59,7 +59,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EmployeeDBModelStoreContainer" CdmEntityContainer="EmployeeDBEntities">
+        <EntityContainerMapping StorageEntityContainer="EmployeeDBModelStoreContainer" CdmEntityContainer="EmployeeDB">
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="EmployeeDBModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
